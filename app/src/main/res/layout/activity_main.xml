@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hoangtrongminhduc.dev.weeklyschedule.MainActivity">
+    <TextView
+        android:text="WEEKLY SCHEDULE"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffff"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:weightSum="6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Công việc:"
+                android:gravity="center|right"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtCongviec"
+                android:layout_weight="5"
+                android:hint="Nhập công việc sẽ làm"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Nội dung:"
+                android:gravity="center|right"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtNoidung"
+                android:layout_weight="5"
+                android:hint="Nhập nội dung công việc"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Ngày HT:"
+            android:gravity="center|right"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:text="Ngày hoàn thành"
+            android:layout_weight="6"
+            android:textColor="@color/titleRed"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnDate"
+            android:text="Chọn"
+            android:onClick="showDate"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Giờ HT:"
+            android:gravity="center|right"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvTime"
+            android:text="Thời gian hoàn thành"
+            android:textColor="@color/titleRed"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnTime"
+            android:text="Chọn"
+            android:onClick="showTime"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnAdd"
+        android:onClick="processAddJob"
+        android:layout_gravity="center"
+        android:text="Thêm vào danh sách"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:background="@color/titleOrange"
+        android:text="Danh sách công việc"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <ListView
+        android:id="@+id/lvCongviec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>
